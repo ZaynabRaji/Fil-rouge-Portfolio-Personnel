@@ -1,1 +1,152 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    list-style: none;
+}
+
+#HomeMenue {
+    padding: 1em;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #20BCD1;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#Logo {
+    width: 30%;
+    height: fit-content;
+}
+
+.HomeFlex {
+    display: flex;
+    height: 40em;
+    align-items: center;
+    /* gap: 5%; */
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+
+#HomePic {
+    width: 50%;
+    height: fit-content;
+}
+
+h2 {
+    font-size: 4em;
+    /* flex-grow: 200PX; */
+}
+
+h3 {
+    font-size: 3em;
+}
+
+button {
+    margin: 2em;
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 15px;
+    border-color: #20BCD1;
+    color: #20BCD1;
+    font-size: 2em;
+    padding: 0.8rem 2.6rem;
+    border-width: 2px;
+}
+.About{
+    background-color: #f5f5f5;
+    padding: 1em;
+}
+h1 {
+    text-align: center;
+    color: #20BCD1;
+    font-size: 5em;
+    padding-top: 0.5rem;
+}
+
+.AboutFlex {
+    display: flex;
+    margin: 1em;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2em;
+}
+.AboutList{
+    border-bottom: solid;
+    border-color: lightgray;
+    margin-bottom: 1em;
+}
+span {
+    font-weight: bold;
+    color: #20BCD1;
+    padding: 1em;
+}
+
+h4 {
+    color: #20BCD1;
+    font-weight: bold;
+    font-size: 3em;
+    margin-left: 3em;
+}
+
+.Formation {
+    font-size: 2em;
+    margin-left: 2em;
+    padding: 1em;
+}
+
+.Project{
+    text-align: center;
+}
+#ProjectMenue {
+    display: flex;
+    justify-content: center;
+    color: #20BCD1;
+    font-size: 2em;
+}
+
+.ProjectList {
+    margin: 1em;
+}
+
+.ProjectImg {
+    width: 550px;
+    height: 550px;
+    object-fit: cover;
+    /* Ensures the image covers the entire area without stretching */
+    border-radius: 50%;
+}
+
+.Skills{
+    background-color: #f5f5f5;
+    padding: 1em;
+}
+h5{
+    font-size: 2em;
+    margin-left: 2em;
+}
+#SkillsItems{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10%;
+}
+section{
+    flex: 1 1 calc(50% - 10%);
+    margin-bottom: 3em;
+}
+.ProgressBar{
+    background-color: lightgray;
+    width: 100%;
+    border-radius: 10px;
+}
+.ItemBar{
+    background-color: #20BCD1;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+
 
