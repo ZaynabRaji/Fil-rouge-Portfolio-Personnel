@@ -2,139 +2,159 @@
     margin: 0%;
     padding: 0%;
     list-style: none;
+    font-family: "Trirong", serif;
 }
 
+#HomeSection{
+    background-color: black;
+    padding-bottom: 8em;
+}
 #HomeMenue {
-    padding: 1em;
     background-color: black;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    position: fixed;
+    top: 0%;
+    width: 100%;
+}
+
+a{
     color: #20BCD1;
-    font-size: 2em;
-    font-weight: bold;
 }
 
 #Logo {
-    width: 30%;
-    height: fit-content;
+    width: 20%;
+    height: 20%;
 }
 
 .HomeFlex {
     display: flex;
-    height: 40em;
     align-items: center;
-    /* gap: 5%; */
     text-align: center;
     color: white;
-    background-color: black;
+    margin-left: 15em;
+    margin-top: 5em;
+    gap: 10em;
+    padding-top: 5em;
 }
 
 #HomePic {
-    width: 50%;
-    height: fit-content;
+    width: 30%;
+    height: 30%;
 }
 
 h2 {
-    font-size: 4em;
-    /* flex-grow: 200PX; */
+    font-weight: bolder;
+    overflow: hidden;       /* Hides the text that hasn't been "typed" yet */
+  white-space: nowrap;    /* Prevents the text from wrapping */
+  border-right: 2px solid white; /* Mimics a blinking cursor */
+    animation:typing 5s steps(33) 3s infinite,blink-cursor  step-end infinite;
 }
+@keyframes typing {
+    0% { width: 0; }        /* Starts with no width */
+  90% { width: 100%; }       /* Finish typing here */
+  100% { width: 100%; }      /* Hold the full text at 100% width for the pause */
+  }
+  @keyframes blink-cursor {
+    50% { border-color: transparent; }  /* Makes cursor "disappear" every half second */
+  }
 
-h3 {
-    font-size: 3em;
-}
-
-button {
-    margin: 2em;
+.HireBtn{
     cursor: pointer;
     background-color: transparent;
-    border-radius: 15px;
+    border-radius: 20rem;
     border-color: #20BCD1;
     color: #20BCD1;
-    font-size: 2em;
+    margin: 2em;
     padding: 0.8rem 2.6rem;
-    border-width: 2px;
+    border-width: 4px;
 }
-.About{
-    background-color: #f5f5f5;
-    padding: 1em;
+#AboutSection{
+    margin-top: 5em;
 }
 h1 {
+    font-family:"Audiowide", sans-serif;
     text-align: center;
     color: #20BCD1;
-    font-size: 5em;
-    padding-top: 0.5rem;
+    font-size: 3em;
+}
+.AboutMe{
+    font-family:"Sofia", sans-serif;
+    text-align: justify;
+    margin: 3em;
+    margin-left: 5em;
+    margin-right: 5em;
 }
 
-.AboutFlex {
-    display: flex;
-    margin: 1em;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 2em;
-}
 .AboutList{
-    border-bottom: solid;
-    border-color: lightgray;
-    margin-bottom: 1em;
+    display: flex;
+    justify-content: space-around;
 }
 span {
     font-weight: bold;
     color: #20BCD1;
-    padding: 1em;
 }
 
-h4 {
-    color: #20BCD1;
-    font-weight: bold;
-    font-size: 3em;
-    margin-left: 3em;
+.CvBtn{
+    cursor: pointer;
+    background-color: #D1BC20;
+    border-radius: 20rem;
+    border-color: transparent;
+    color: white;
+    margin: 2em;
+    padding: 0.8rem 2.6rem;
+    margin-left: 40%;
+    margin-bottom: 5em;
 }
 
-.Formation {
-    font-size: 2em;
-    margin-left: 2em;
-    padding: 1em;
-}
-
-.Project{
-    text-align: center;
+#ProjectSection{
+    background-color: #f5f5f5;
+    padding-top: 5em;
+    padding-bottom: 5em;
 }
 #ProjectMenue {
     display: flex;
     justify-content: center;
+    gap: 5%;
     color: #20BCD1;
-    font-size: 2em;
-}
-
-.ProjectList {
-    margin: 1em;
+    font-size: 1em;
+    margin: 2em;
 }
 
 .ProjectImg {
-    width: 550px;
-    height: 550px;
-    object-fit: cover;
-    /* Ensures the image covers the entire area without stretching */
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
+    margin: 1em;
+}
+.Projects{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    margin-left: 10em;
+    margin-right: 10em;
 }
 
-.Skills{
-    background-color: #f5f5f5;
-    padding: 1em;
+#SkillsSection{
+ padding-top: 5em;
+ padding-bottom: 5em;
 }
 h5{
-    font-size: 2em;
-    margin-left: 2em;
+    font-size: 1em;
+    font-weight: bolder;
 }
 #SkillsItems{
     display: flex;
     flex-wrap: wrap;
-    gap: 10%;
+    gap: 5%;
+    margin-top: 5em;
+    margin-left: 5em;
+    margin-right: 5em;
 }
 section{
     flex: 1 1 calc(50% - 10%);
-    margin-bottom: 3em;
+    margin-bottom: 4em;
 }
 .ProgressBar{
     background-color: lightgray;
@@ -147,6 +167,90 @@ section{
     text-align: center;
 }
 
+#ServicesSection{
+    background-color: #f5f5f5;
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
 
 
 
+
+
+
+
+
+
+
+
+
+#BlogSection{
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
+
+
+
+
+
+
+
+
+
+
+#ContactSection{
+    background-color: #f5f5f5;
+    padding: 5em;
+
+}
+.ContactFlex{
+    display: flex;
+    align-items: center;
+
+}
+h4{
+    font-size: 1.5em;
+    margin-top: 3em;
+    margin-bottom: 1em;
+}
+input{
+    width: 40%;
+    height: 2em;
+    margin-bottom: 1em;
+    border: solid #dae1e3;
+    padding-left: 1em;
+}
+textarea{
+    width: 82%;
+    border-style: solid;
+    border-color: #dae1e3;
+    padding-left: 1em;
+}
+.ContactBtn{
+    background-color: #20BCD1;
+    color: white;
+    cursor: pointer;
+    border-radius: 15px;
+    border-color: transparent;
+    width: 15%;
+    align-items: center;
+    margin-left: 40%;
+    margin-top: 2em;
+}
+
+.ContactMenue{
+    padding-left: 9em;
+    padding-top: 4em;
+    padding-bottom: 4em;
+    color: #252b33;
+}
+#ContactIcone{
+    margin-right: 1em;
+}
+
+footer{
+color: #252b33;
+font-family: "Audiowide", sans-serif;
+margin-left: 10em;
+margin: 2em;
+}
