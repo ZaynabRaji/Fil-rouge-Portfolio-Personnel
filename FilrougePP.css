@@ -187,7 +187,12 @@ section{
     margin-left: 3em;
     margin-top: 2em;
 }
-
+.Quote{
+    margin-top: 5em;
+text-align: center;
+font-family:"Sofia", sans-serif;
+color: #20BCD1;
+}
 
 
 
@@ -228,15 +233,14 @@ h4{
 }
 input{
     width: 40%;
-    height: 2em;
+    height: 2.5em;
     margin-bottom: 1em;
     border: solid #dae1e3;
     padding-left: 1em;
 }
 textarea{
-    width: 82%;
-    border-style: solid;
-    border-color: #dae1e3;
+    width: 83%;
+    border: solid #dae1e3;
     padding-left: 1em;
 }
 .ContactBtn{
@@ -245,17 +249,17 @@ textarea{
     cursor: pointer;
     border-radius: 15px;
     border-color: transparent;
-    width: 15%;
+    width: 30%;
+    padding: 10px;
     align-items: center;
-    margin-left: 40%;
+    margin-left: 30%;
     margin-top: 2em;
 }
 
 .ContactMenue{
-    padding-left: 9em;
     padding-top: 8em;
     padding-bottom: 4em;
-    padding-right: 5em;
+    padding-right: 7em;
     color: #252b33;
 }
 #ContactIcone{
