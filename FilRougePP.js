@@ -55,15 +55,15 @@ function closePopupWeather(){
   popupWeather.classList.remove("openpopup7");
 }
 
-const popup = document.getElementsById('ProjectContainer');
-popup.addEventListener('click', (event) => {
-  if (event.target == popup){
-    popup.close();
-  }
-})
+// const popup = document.getElementsById('ProjectContainer');
+// popup.addEventListener('click', (event) => {
+//   if (event.target == popup){
+//     popup.close();
+//   }
+// })
 
-// burger menue
-const MenuIcone = document.getElementsByClassName('MenuList');
-function openMenuIcone(){
-MenuIcone.classList.add('openMenuIcone');
+// burger menu
+function toggleMenu(){
+  const HomeMenu = document.getElementsById('HomeMenu');
+  HomeMenu.classList.toggle("showMenu")
 }

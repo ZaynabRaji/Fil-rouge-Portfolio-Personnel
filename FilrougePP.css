@@ -10,7 +10,7 @@
     padding-bottom: 8em;
 }
 
-#HomeMenue {
+#HomeMenu {
     background-color: black;
     display: flex;
     align-items: center;
@@ -20,7 +20,7 @@
     width: 100%;
 }
 
-#burgerMenue {
+#burgerMenu {
     visibility: hidden;
     cursor: pointer;
     position: fixed;
@@ -153,7 +153,7 @@ span {
     padding-bottom: 5em;
 }
 
-#ProjectMenue {
+#ProjectMenu {
     display: flex;
     justify-content: center;
     gap: 5%;
@@ -369,7 +369,7 @@ textarea {
     margin-top: 2em;
 }
 
-.ContactMenue {
+.ContactMenu {
     padding-top: 8em;
     padding-bottom: 4em;
     padding-right: 7em;
@@ -388,39 +388,42 @@ footer {
 }
 
 @media screen and (max-width: 430px) {
-    #HomeMenue {
+    #HomeMenu {
         visibility: hidden;
     }
 
-    #burgerMenue {
+    #burgerMenu {
         visibility: visible;
         display: flex;
         background-color: black;
         position: fixed;
     }
 
-    #burgerMenue img {
+    #burgerMenu img {
         width: 20%;
         height: fit-content;
     }
 
-    #burgerMenue i {
+    #burgerMenu i {
         padding-top: 2em;
         padding-right: 2em;
         cursor: pointer;
     }
-    .openMenuIcone{
-        visibility: visible;
+    #HomeMenu.showMenu{
+        display: block;
+
     }
 
     .HomeFlex {
-        flex-direction: column;
+        flex-direction: column-reverse;
         margin-left: 0em;
         margin-top: 0em;
         gap: 0em;
         padding-top: 8em;
     }
-
+#HomePic{
+    margin-bottom: 3em;
+}
     h2 {
         font-size: 1.5em;
     }
@@ -448,7 +451,7 @@ footer {
         margin-left: 1em;
     }
 
-    #ProjectMenue {
+    #ProjectMenu {
         gap: 3%;
         font-size: 0.5em;
     }
@@ -522,7 +525,7 @@ footer {
         margin-top: 2em;
     }
 
-    .ContactMenue {
+    .ContactMenu {
         padding-top: 2em;
         padding-bottom: 0em;
         padding-right: Oem;
