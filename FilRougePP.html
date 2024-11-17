@@ -1,384 +1,314 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong|Poppins"
-    />
-    <link rel="stylesheet" href="FilrougePP.css" />
-    <title>Z.RAJI - Personal Portfolio</title>
-  </head>
-  <body>
-    <div id="HomeSection">
-      <ul id="HomeMenue">
-        <li>
-          <a href="#HomeSection"
-            ><img src="LOGO.png" alt="logo portfolio" id="Logo"
-          /></a>
-        </li>
-        <li><a href="#HomeSection">Home</a></li>
-        <li><a href="#AboutSection">About</a></li>
-        <li><a href="#ProjectSection">Project</a></li>
-        <li><a href="#SkillsSection">Skills</a></li>
-        <li><a href="#ServicesSection">Services</a></li>
-        <li><a href="#BlogSection">Blog</a></li>
-        <li><a href="#ContactSection">Contact</a></li>
-      </ul>
-      <div class="HomeFlex">
-        <div>
-          <h3>Welcome</h3>
-          <h2>I’am Zaynab RAJI, a web designer.</h2>
-          <h3>Based in Marrakesh, Morocco</h3>
-          <button class="HireBtn"><a href="#ContactSection">Hire me</a></button>
-        </div>
 
-        <img src="Hand coding.png" alt="web developpement" id="HomePic" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong|Poppins" />
+  <link rel="stylesheet" href="FilrougePP.css" />
+  <title>Z.RAJI - Personal Portfolio</title>
+</head>
+
+<body>
+  <div id="HomeSection">
+    <ul id="HomeMenue">
+      <li>
+        <a href="#HomeSection"><img src="LOGO.png" alt="logo portfolio" id="Logo" /></a>
+      </li>
+      <li class="MenuList"><a href="#HomeSection">Home</a></li>
+      <li class="MenuList"><a href="#AboutSection">About</a></li>
+      <li class="MenuList"><a href="#ProjectSection">Project</a></li>
+      <li class="MenuList"><a href="#SkillsSection">Skills</a></li>
+      <li class="MenuList"><a href="#ServicesSection">Services</a></li>
+      <li class="MenuList"><a href="#BlogSection">Blog</a></li>
+      <li class="MenuList"><a href="#ContactSection">Contact</a></li>
+    </ul>
+<ul id="burgerMenue">
+  <li><img src="LOGO.png" alt="logo portfolio"></li>
+  <li><i class="fa-solid fa-bars" style="color: #20bcd1;" id="MenuIcone" onclick="openMenuIcone()"></i></li>
+</ul>
+    <div class="HomeFlex">
+
+      <div>
+        <h3>Welcome</h3>
+        <h2>I’am Zaynab RAJI, a web designer.</h2>
+        <h3>Based in Marrakesh, Morocco</h3>
+        <button class="HireBtn"><a href="#ContactSection">Hire me</a></button>
+      </div>
+
+      <img src="Hand coding.png" alt="web developpement" id="HomePic" />
+    </div>
+
+  </div>
+
+  <div id="AboutSection">
+    <h1>Know me more</h1>
+    <p class="AboutMe">
+      Hello ! <br />
+      I’m <span> ZAYNAB RAJI </span>, a passionate and motivated junior web
+      developer with a strong foundation in front-end and back-end
+      technologies. <br />
+      With a diploma in <span> Web & mobile Web development </span>, by
+      simplon Academy. I have experience working with
+      <span> HTML, CSS, and JavaScript </span> for building responsive and
+      user-friendly interfaces.<br />
+      I love solving problems and continuously learning new skills to enhance
+      my coding abilities. I'm eager to contribute to a dynamic team and grow
+      as a developer.
+    </p>
+
+    <ul class="AboutList">
+      <li><span>Name : </span><br />Zaynab RAJI</li>
+      <li>
+        <span>Email : </span><br /><a href="mailto: zaynab.raji@gmail.com" class="Mail">zaynab.raji@gmail.com</a>
+      </li>
+      <li><span>From : </span><br />Marrakesh, Morocco</li>
+    </ul>
+<a href="Zaynab RAJI - CV.pdf" download="CV"><button class="CvBtn" type="button">Download CV</button></a>
+    
+  </div>
+
+  <div id="ProjectSection">
+    <h1>My work</h1>
+    <ul id="ProjectMenue">
+      <li class="ProjectList">All</li>
+      <li class="ProjectList">HTML / CSS</li>
+      <li class="ProjectList">JavaScript</li>
+      <li class="ProjectList">API</li>
+    </ul>
+    <div class="Projects">
+      <img src="1SweetRecipes.png" alt="Sweet Recipes" class="ProjectImg" onclick="openPopupRecipes()" />
+      <img src="2MTS2025.png" alt="Morocco Tech Summit 2025" class="ProjectImg" onclick="openPopupMTS()" />
+      <img src="3Portfolio.jpg" alt="Portfolio Personnel" class="ProjectImg" onclick="openPopupPortfolio()" />
+      <img src="4NoteApp.png" alt="Note Taking App" class="ProjectImg" onclick="openPopupNote()" />
+      <img src="5TodoList.png" alt="To do list App" class="ProjectImg" onclick="openPopupTodo()" />
+      <img src="6MealPlanner.jpeg" alt="Meal Planner App" class="ProjectImg" onclick="openPopupMeal()" />
+      <img src="7WeatherApp.png" alt="Weather App" class="ProjectImg" onclick="openPopupWeather()" />
+    </div>
+    <!-- popup for project details -->
+    <div id="ProjectContainer">
+      <div class="popup" id="popupRecipes">
+        <h1>Sweet Recipes App</h1>
+        <img src="1SweetRecipes.png" alt="picture of the website" />
+        <p>This is a site for finding sweet Recipes</p>
+        <button id="exitbtn" type="button" onclick="closePopupRecipes()">
+          Exit
+        </button>
+      </div>
+      <div class="popup" id="popupMTS">
+        <h1>Morocco Tech Summit 2025</h1>
+        <img src="2MTS2025.png" alt="picture of the website" />
+        <p>
+          This is the landing page of the Morocco Tech Summit 2025 website
+          <br />
+          <a href="https://github.com/ZaynabRaji/MTS2025.git">MTS2025 - Github Link</a>
+        </p>
+        <button id="exitbtn" type="button" onclick="closePopupMTS()">
+          Exit
+        </button>
+      </div>
+      <div class="popup" id="popupPortfolio">
+        <h1>Personal Portfolio</h1>
+        <img src="3Portfolio.jpg" alt="picture of the website" />
+        <p>
+          This is a personal portfolio website <br />
+          <a href="https://github.com/ZaynabRaji/-Portfolio-Personnel.git">Personal Portfolio - Github Link</a>
+        </p>
+        <button id="exitbtn" type="button" onclick="closePopupPortfolio()">
+          Exit
+        </button>
+      </div>
+      <div class="popup" id="popupNote">
+        <h1>Note Taking App</h1>
+        <img src="4NoteApp.png" alt="picture of the website" />
+        <p>
+          This is an application for taking notes <br />
+          <a href="https://github.com/ZaynabRaji/application-for-taking-notes.git">Brain Binder - Github Link</a>
+        </p>
+        <button id="exitbtn" type="button" onclick="closePopupNote()">
+          Exit
+        </button>
+      </div>
+      <div class="popup" id="popupTodo">
+        <h1>To Do App</h1>
+        <img src="5TodoList.png" alt="picture of the website" />
+        <p>
+          This is an application for creating ToDo lists <br />
+          <a href="https://github.com/ZaynabRaji/To-do-list-app.git">ToDo List - Github Link</a>
+        </p>
+        <button id="exitbtn" type="button" onclick="closePopupTodo()">
+          Exit
+        </button>
+      </div>
+      <div class="popup" id="popupMeal">
+        <h1>Meal Planner App</h1>
+        <img src="6MealPlanner.jpeg" alt="picture of the website" />
+        <p>
+          This is an application to plan and save your meals in advance <br />
+          <a href="https://github.com/ZaynabRaji/Yummy-App-27-08-06-09.git">Yummy APP - Github Link</a>
+        </p>
+        <button id="exitbtn" type="button" onclick="closePopupMeal()">
+          Exit
+        </button>
+      </div>
+      <div class="popup" id="popupWeather">
+        <h1>Weather App</h1>
+        <img src="7WeatherApp.png" alt="picture of the website" />
+        <p>
+          This is an application foc checking the weather by city <br />
+          <a href="https://github.com/ZaynabRaji/Weather-app.git">
+            Taqs Track - Github Link</a>
+        </p>
+        <button id="exitbtn" type="button" onclick="closePopupWeather()">
+          Exit
+        </button>
       </div>
     </div>
+  </div>
 
-    <div id="AboutSection">
-      <h1>Know me more</h1>
+  <div id="SkillsSection">
+    <h1>My skills</h1>
 
-      <p class="AboutMe">
-        Hello ! <br />
-        I’m <span> ZAYNAB RAJI </span>, a passionate and motivated junior web
-        developer with a strong foundation in front-end and back-end
-        technologies. <br />
-        With a diploma in <span> Web & mobile Web development </span>, by
-        simplon Academy. I have experience working with
-        <span> HTML, CSS, and JavaScript </span> for building responsive and
-        user-friendly interfaces.<br />
-        I love solving problems and continuously learning new skills to enhance
-        my coding abilities. I'm eager to contribute to a dynamic team and grow
-        as a developer.
-      </p>
-
-      <ul class="AboutList">
-        <li><span>Name : </span><br />Zaynab RAJI</li>
-        <li>
-          <span>Email : </span><br /><a
-            href="mailto: zaynab.raji@gmail.com"
-            class="Mail"
-            >zaynab.raji@gmail.com</a
-          >
-        </li>
-        <li><span>From : </span><br />Marrakesh, Morocco</li>
-      </ul>
-
-      <button class="CvBtn">Download CV</button>
+    <div id="SkillsItems">
+      <section>
+        <h5>Web Design</h5>
+        <div class="ProgressBar">
+          <div class="ItemBar" style="width: 90%">90%</div>
+        </div>
+      </section>
+      <section>
+        <h5>HTML</h5>
+        <div class="ProgressBar">
+          <div class="ItemBar" style="width: 98%">98%</div>
+        </div>
+      </section>
+      <section>
+        <h5>CSS</h5>
+        <div class="ProgressBar">
+          <div class="ItemBar" style="width: 95%">95%</div>
+        </div>
+      </section>
+      <section>
+        <h5>JavaScript</h5>
+        <div class="ProgressBar">
+          <div class="ItemBar" style="width: 85%">85%</div>
+        </div>
+      </section>
+      <section>
+        <h5>API</h5>
+        <div class="ProgressBar">
+          <div class="ItemBar" style="width: 50%">50%</div>
+        </div>
+      </section>
+      <section>
+        <h5>Responsive Design</h5>
+        <div class="ProgressBar">
+          <div class="ItemBar" style="width: 70%">70%</div>
+        </div>
+      </section>
+      <section>
+        <h5>Communication</h5>
+        <div class="ProgressBar">
+          <div class="ItemBar" style="width: 95%">95%</div>
+        </div>
+      </section>
+      <section>
+        <h5>Interpersonal Skills</h5>
+        <div class="ProgressBar">
+          <div class="ItemBar" style="width: 95%">95%</div>
+        </div>
+      </section>
     </div>
+  </div>
 
-    <div id="ProjectSection">
-      <h1>My work</h1>
-      <ul id="ProjectMenue">
-        <li class="ProjectList">All</li>
-        <li class="ProjectList">HTML / CSS</li>
-        <li class="ProjectList">JavaScript</li>
-        <li class="ProjectList">API</li>
-      </ul>
-      <div class="Projects">
-        <img
-          src="1SweetRecipes.png"
-          alt="Sweet Recipes"
-          class="ProjectImg"
-          onclick="openPopupRecipes()"
-        />
-        <img
-          src="2MTS2025.png"
-          alt="Morocco Tech Summit 2025"
-          class="ProjectImg"
-          onclick="openPopupMTS()"
-        />
-        <img
-          src="3Portfolio.jpg"
-          alt="Portfolio Personnel"
-          class="ProjectImg"
-          onclick="openPopupPortfolio()"
-        />
-        <img
-          src="4NoteApp.png"
-          alt="Note Taking App"
-          class="ProjectImg"
-          onclick="openPopupNote()"
-        />
-        <img
-          src="5TodoList.png"
-          alt="To do list App"
-          class="ProjectImg"
-          onclick="openPopupTodo()"
-        />
-        <img
-          src="6MealPlanner.jpeg"
-          alt="Meal Planner App"
-          class="ProjectImg"
-          onclick="openPopupMeal()"
-        />
-        <img
-          src="7WeatherApp.png"
-          alt="Weather App"
-          class="ProjectImg"
-          onclick="openPopupWeather()"
-        />
+  <div id="ServicesSection">
+    <h1>What i do</h1>
+    <div id="ServicesFlex">
+      <div class="MyServices">
+        <h5>Customized Web & web App Development</h5>
+        <p>
+          Creating a custom software application depending on your specific
+          business needs.
+        </p>
       </div>
-      <!-- popup for project details -->
-      <div id="ProjectContainer">
-        <div class="popup" id="popupRecipes">
-          <h1>Sweet Recipes App</h1>
-          <img src="1SweetRecipes.png" alt="picture of the website" />
-          <p>This is a site for finding sweet Recipes</p>
-          <button id="exitbtn" type="button" onclick="closePopupRecipes()">
-            Exit
-          </button>
-        </div>
-        <div class="popup" id="popupMTS">
-          <h1>Morocco Tech Summit 2025</h1>
-          <img src="2MTS2025.png" alt="picture of the website" />
-          <p>
-            This is the landing page of the Morocco Tech Summit 2025 website
-            <br />
-            <a href="https://github.com/ZaynabRaji/MTS2025.git"
-              >MTS2025 - Github Link</a
-            >
-          </p>
-          <button id="exitbtn" type="button" onclick="closePopupMTS()">
-            Exit
-          </button>
-        </div>
-        <div class="popup" id="popupPortfolio">
-          <h1>Personal Portfolio</h1>
-          <img src="3Portfolio.jpg" alt="picture of the website" />
-          <p>
-            This is a personal portfolio website <br />
-            <a href="https://github.com/ZaynabRaji/-Portfolio-Personnel.git"
-              >Personal Portfolio - Github Link</a
-            >
-          </p>
-          <button id="exitbtn" type="button" onclick="closePopupPortfolio()">
-            Exit
-          </button>
-        </div>
-        <div class="popup" id="popupNote">
-          <h1>Note Taking App</h1>
-          <img src="4NoteApp.png" alt="picture of the website" />
-          <p>
-            This is an application for taking notes <br />
-            <a
-              href="https://github.com/ZaynabRaji/application-for-taking-notes.git"
-              >Brain Binder - Github Link</a
-            >
-          </p>
-          <button id="exitbtn" type="button" onclick="closePopupNote()">
-            Exit
-          </button>
-        </div>
-        <div class="popup" id="popupTodo">
-          <h1>To Do App</h1>
-          <img src="5TodoList.png" alt="picture of the website" />
-          <p>
-            This is an application for creating ToDo lists <br />
-            <a href="https://github.com/ZaynabRaji/To-do-list-app.git"
-              >ToDo List - Github Link</a
-            >
-          </p>
-          <button id="exitbtn" type="button" onclick="closePopupTodo()">
-            Exit
-          </button>
-        </div>
-        <div class="popup" id="popupMeal">
-          <h1>Meal Planner App</h1>
-          <img src="6MealPlanner.jpeg" alt="picture of the website" />
-          <p>
-            This is an application to plan and save your meals in advance <br />
-            <a href="https://github.com/ZaynabRaji/Yummy-App-27-08-06-09.git"
-              >Yummy APP - Github Link</a
-            >
-          </p>
-          <button id="exitbtn" type="button" onclick="closePopupMeal()">
-            Exit
-          </button>
-        </div>
-        <div class="popup" id="popupWeather">
-          <h1>Weather App</h1>
-          <img src="7WeatherApp.png" alt="picture of the website" />
-          <p>
-            This is an application foc checking the weather by city <br />
-            <a href="https://github.com/ZaynabRaji/Weather-app.git">
-              Taqs Track - Github Link</a
-            >
-          </p>
-          <button id="exitbtn" type="button" onclick="closePopupWeather()">
-            Exit
-          </button>
-        </div>
+      <div class="MyServices">
+        <h5>Full-stack Development</h5>
+        <p>
+          Developing both the frontend (user-facing) and backend (database and
+          logic) of applications.
+        </p>
+      </div>
+      <div class="MyServices">
+        <h5>Website Maintenance Services</h5>
+        <p>
+          Backing up your site regularly and monitoring your site's
+          performance.
+        </p>
+      </div>
+      <div class="MyServices">
+        <h5>Responsive Design Services</h5>
+        <p>Designing websites to adapt to a user's device.</p>
       </div>
     </div>
+    <p class="Quote">"Success in web development comes from perseverance and curiosity. <br>
+      Embrace every challenge as a learning opportunity, and remember that every expert was once a beginner."</p>
+  </div>
 
-    <div id="SkillsSection">
-      <h1>My skills</h1>
+  <div id="BlogSection">
+    <h1>My blog</h1>
 
-      <div id="SkillsItems">
-        <section>
-          <h5>Web Design</h5>
-          <br />
-          <div class="ProgressBar">
-            <div class="ItemBar" style="width: 90%">90%</div>
-          </div>
-        </section>
-        <section>
-          <h5>HTML</h5>
-          <br />
-          <div class="ProgressBar">
-            <div class="ItemBar" style="width: 98%">98%</div>
-          </div>
-        </section>
-        <section>
-          <h5>CSS</h5>
-          <br />
-          <div class="ProgressBar">
-            <div class="ItemBar" style="width: 95%">95%</div>
-          </div>
-        </section>
-        <section>
-          <h5>JavaScript</h5>
-          <br />
-          <div class="ProgressBar">
-            <div class="ItemBar" style="width: 85%">85%</div>
-          </div>
-        </section>
-        <section>
-          <h5>API</h5>
-          <br />
-          <div class="ProgressBar">
-            <div class="ItemBar" style="width: 50%">50%</div>
-          </div>
-        </section>
-        <section>
-          <h5>Responsive Design</h5>
-          <br />
-          <div class="ProgressBar">
-            <div class="ItemBar" style="width: 70%">70%</div>
-          </div>
-        </section>
-        <section>
-          <h5>Communication</h5>
-          <br />
-          <div class="ProgressBar">
-            <div class="ItemBar" style="width: 95%">95%</div>
-          </div>
-        </section>
-        <section>
-          <h5>Interpersonal Skills</h5>
-          <br />
-          <div class="ProgressBar">
-            <div class="ItemBar" style="width: 95%">95%</div>
-          </div>
-        </section>
-      </div>
+
+
+
+
+
+  </div>
+
+  <div id="ContactSection">
+    <h1>Get in touch</h1>
+    <div class="ContactFlex">
+      <section>
+        <ul class="ContactMenue">
+          <li>
+            <i class="fa-regular fa-address-book"></i><span> Adress : </span><br />Marrakesh, Morocco
+          </li>
+          <li>
+            <i class="fa-regular fa-envelope"></i><span> Email : </span><br /><a href="mailto: zaynab.raji@gmail.com"
+              class="Mail">zaynab.raji@gmail.com</a>
+          </li>
+          <li>
+            <i class="fa-solid fa-mobile-screen"></i><span> Phone : </span><br />+212 6 10 24 75 29
+          </li>
+          <li>
+            <span> Follow me : </span><br />
+            <i class="fa-brands fa-x-twitter" id="ContactIcone"></i>
+            <i class="fa-brands fa-linkedin" id="ContactIcone"></i>
+            <i class="fa-brands fa-github" id="ContactIcone"></i>
+            <i class="fa-brands fa-figma" id="ContactIcone"></i>
+          </li>
+        </ul>
+      </section>
+      <section style="flex-basis: 90%">
+        <form class="ContactForm" action="https://formspree.io/f/mpwzroqb" method="post">
+          <h4>Send us a note</h4>
+          <input type="text" name="name" placeholder="Name" required />
+          <input type="email" name="email" placeholder="Email" required /><br />
+          <textarea name="Message" placeholder="how can i help you ?" cols="75" rows="10" required></textarea><br />
+          <button class="ContactBtn" type="submit">Send Message</button>
+        </form>
+      </section>
     </div>
+  </div>
 
-    <div id="ServicesSection">
-      <h1>What i do</h1>
-      <div id="ServicesFlex">
-        <div class="MyServices">
-          <h5>Customized Web & web App Development</h5>
-          <p>
-            Creating a custom software application depending on your specific
-            business needs.
-          </p>
-        </div>
-        <div class="MyServices">
-          <h5>Full-stack Development</h5>
-          <p>
-            Developing both the frontend (user-facing) and backend (database and
-            logic) of applications.
-          </p>
-        </div>
-        <div class="MyServices">
-          <h5>Website Maintenance Services</h5>
-          <p>
-            Backing up your site regularly and monitoring your site's
-            performance.
-          </p>
-        </div>
-        <div class="MyServices">
-          <h5>Responsive Design Services</h5>
-          <p>Designing websites to adapt to a user's device.</p>
-        </div>
-      </div>
-      <p class="Quote">"Success in web development comes from perseverance and curiosity. <br>
-         Embrace every challenge as a learning opportunity, and remember that every expert was once a beginner."</p>
-    </div>
+  <footer>
+    <p>
+      Copyright 2024 <a href="#HomeSection">RAJI</a>. All Rights Reserved.
+    </p>
+  </footer>
 
-    <div id="BlogSection">
-      <h1>My blog</h1>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script src="FilRougePP.js"></script>
+</body>
 
-
-
-
-
-
-    </div>
-
-    <div id="ContactSection">
-      <h1>Get in touch</h1>
-      <div class="ContactFlex">
-        <section>
-          <ul class="ContactMenue">
-            <li>
-              <i class="fa-regular fa-address-book"></i><span> Adress : </span
-              ><br />Marrakesh, Morocco
-            </li>
-            <li>
-              <i class="fa-regular fa-envelope"></i><span> Email : </span
-              ><br /><a href="mailto: zaynab.raji@gmail.com" class="Mail"
-                >zaynab.raji@gmail.com</a
-              >
-            </li>
-            <li>
-              <i class="fa-solid fa-mobile-screen"></i><span> Phone : </span
-              ><br />+212 6 10 24 75 29
-            </li>
-            <li>
-              <span> Follow me : </span><br />
-              <i class="fa-brands fa-x-twitter" id="ContactIcone"></i>
-              <i class="fa-brands fa-linkedin" id="ContactIcone"></i>
-              <i class="fa-brands fa-github" id="ContactIcone"></i>
-              <i class="fa-brands fa-figma" id="ContactIcone"></i>
-            </li>
-          </ul>
-        </section>
-        <section style="flex-basis: 90%">
-          <form class="ContactForm" action="">
-            <h4>Send us a note</h4>
-            <input type="text" placeholder="Name" required />
-            <input type="email" placeholder="Email" required /><br />
-            <textarea
-              name="Message"
-              placeholder="how can i help you ?"
-              cols="75"
-              rows="10"
-              required
-            ></textarea
-            ><br />
-            <button class="ContactBtn" type="submit" value="send">Send Message</button>
-          </form>
-        </section>
-      </div>
-    </div>
-
-    <footer>
-      <p>
-        Copyright 2024 <a href="#HomeSection">RAJI</a>. All Rights Reserved.
-      </p>
-    </footer>
-
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script src="FilRougePP.js"></script>
-  </body>
 </html>

@@ -5,10 +5,11 @@
     font-family: "Trirong", serif;
 }
 
-#HomeSection{
+#HomeSection {
     background-color: black;
     padding-bottom: 8em;
 }
+
 #HomeMenue {
     background-color: black;
     display: flex;
@@ -19,8 +20,15 @@
     width: 100%;
 }
 
-a{
+#burgerMenue {
+    visibility: hidden;
+    cursor: pointer;
+    position: fixed;
+}
+
+a {
     color: #20BCD1;
+    text-decoration-line: none;
 }
 
 #Logo {
@@ -46,21 +54,42 @@ a{
 
 h2 {
     font-weight: bolder;
-    overflow: hidden;       /* Hides the text that hasn't been "typed" yet */
-  white-space: nowrap;    /* Prevents the text from wrapping */
-  border-right: 2px solid white; /* Mimics a blinking cursor */
-    animation:typing 5s steps(33) 3s infinite,blink-cursor  step-end infinite;
+    overflow: hidden;
+    /* Hides the text that hasn't been "typed" yet */
+    white-space: nowrap;
+    /* Prevents the text from wrapping */
+    border-right: 0.25em solid white;
+    /* Mimics a blinking cursor */
+    animation: typing 5s steps(33) 3s infinite, blink-cursor step-end infinite;
 }
-@keyframes typing {
-    0% { width: 0; }        /* Starts with no width */
-  90% { width: 100%; }       /* Finish typing here */
-  100% { width: 100%; }      /* Hold the full text at 100% width for the pause */
-  }
-  @keyframes blink-cursor {
-    50% { border-color: transparent; }  /* Makes cursor "disappear" every half second */
-  }
 
-.HireBtn{
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+
+    /* Starts with no width */
+    90% {
+        width: 100%;
+    }
+
+    /* Finish typing here */
+    100% {
+        width: 100%;
+    }
+
+    /* Hold the full text at 100% width for the pause */
+}
+
+@keyframes blink-cursor {
+    50% {
+        border-color: transparent;
+    }
+
+    /* Makes cursor "disappear" every half second */
+}
+
+.HireBtn {
     cursor: pointer;
     background-color: transparent;
     border-radius: 20rem;
@@ -70,37 +99,43 @@ h2 {
     padding: 0.8rem 2.6rem;
     border-width: 4px;
 }
-#AboutSection{
+
+#AboutSection {
     margin-top: 5em;
 }
+
 h1 {
-    font-family:"Audiowide", sans-serif;
+    font-family: "Audiowide", sans-serif;
     text-align: center;
     color: #20BCD1;
     font-size: 3em;
 }
-.AboutMe{
-    font-family:"Sofia", sans-serif;
+
+.AboutMe {
+    font-family: "Sofia", sans-serif;
     text-align: justify;
     margin: 3em;
     margin-left: 5em;
     margin-right: 5em;
 }
 
-.AboutList{
+.AboutList {
     display: flex;
     justify-content: space-around;
 }
+
 span {
     font-weight: bold;
     color: #20BCD1;
 }
-.Mail{
+
+.Mail {
     color: black;
     cursor: pointer;
 
 }
-.CvBtn{
+
+.CvBtn {
     cursor: pointer;
     background-color: #D1BC20;
     border-radius: 20rem;
@@ -112,11 +147,12 @@ span {
     margin-bottom: 5em;
 }
 
-#ProjectSection{
+#ProjectSection {
     background-color: #f5f5f5;
     padding-top: 5em;
     padding-bottom: 5em;
 }
+
 #ProjectMenue {
     display: flex;
     justify-content: center;
@@ -131,24 +167,97 @@ span {
     height: 200px;
     border-radius: 50%;
     margin: 1em;
+    cursor: pointer;
 }
-.Projects{
+
+.Projects {
     display: flex;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     justify-content: center;
     margin-left: 10em;
     margin-right: 10em;
 }
 
-#SkillsSection{
- padding-top: 5em;
- padding-bottom: 5em;
+/* Fenetre Popup */
+.popup {
+    background-color: white;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    width: 50%;
+    height: fit-content;
+    border-radius: 10px;
+    border-style: double;
+    position: absolute;
+    transform: translate(50%, -100%);
+    visibility: hidden;
 }
-h5{
+
+.openpopup1 {
+    visibility: visible;
+}
+
+.openpopup2 {
+    visibility: visible;
+}
+
+.openpopup3 {
+    visibility: visible;
+}
+
+.openpopup4 {
+    visibility: visible;
+}
+
+.openpopup5 {
+    visibility: visible;
+}
+
+.openpopup6 {
+    visibility: visible;
+}
+
+.openpopup7 {
+    visibility: visible;
+}
+
+.popup h1 {
+    color: black;
+    font-size: 2em;
+    padding: 1em;
+}
+
+.popup p {
+    color: #252b33;
+    padding: 1em;
+}
+
+.popup img {
+    width: 150px;
+    height: 150px;
+}
+
+.popup button {
+    background-color: #20BCD1;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    border-color: transparent;
+    width: 20%;
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+#SkillsSection {
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
+
+h5 {
     font-size: 1em;
     font-weight: bolder;
 }
-#SkillsItems{
+
+#SkillsItems {
     display: flex;
     flex-wrap: wrap;
     gap: 10%;
@@ -156,53 +265,52 @@ h5{
     margin-left: 5em;
     margin-right: 5em;
 }
-section{
+
+section {
     flex: 1 1 calc(50% - 10%);
     margin-bottom: 4em;
 }
-.ProgressBar{
+
+.ProgressBar {
     background-color: lightgray;
     width: 100%;
     border-radius: 10px;
 }
-.ItemBar{
+
+.ItemBar {
     background-color: #20BCD1;
     border-radius: 10px;
     text-align: center;
 }
 
-#ServicesSection{
+#ServicesSection {
     background-color: #f5f5f5;
     padding-top: 5em;
     padding-bottom: 5em;
 }
-#ServicesFlex{
+
+#ServicesFlex {
     margin-top: 4em;
     display: flex;
     flex-wrap: wrap;
     gap: 5%;
 }
-.MyServices{
+
+.MyServices {
     flex: calc(50% - 10%);
     margin-left: 3em;
     margin-top: 2em;
 }
-.Quote{
+
+.Quote {
     margin-top: 5em;
-text-align: center;
-font-family:"Sofia", sans-serif;
-color: #20BCD1;
+    text-align: center;
+    font-family: "Sofia", sans-serif;
+    color: #20BCD1;
 }
 
 
-
-
-
-
-
-
-
-#BlogSection{
+#BlogSection {
     padding-top: 5em;
     padding-bottom: 5em;
 }
@@ -216,116 +324,219 @@ color: #20BCD1;
 
 
 
-#ContactSection{
+#ContactSection {
     background-color: #f5f5f5;
     padding: 5em;
 
 }
-.ContactFlex{
+
+.ContactFlex {
     display: flex;
     align-items: center;
 
 }
-h4{
+
+h4 {
     font-size: 1.5em;
     margin-top: 3em;
     margin-bottom: 1em;
 }
-input{
+
+input {
     width: 40%;
     height: 2.5em;
     margin-bottom: 1em;
     border: solid #dae1e3;
     padding-left: 1em;
 }
-textarea{
+
+textarea {
     width: 83%;
     border: solid #dae1e3;
     padding-left: 1em;
 }
-.ContactBtn{
+
+.ContactBtn {
     background-color: #20BCD1;
     color: white;
     cursor: pointer;
     border-radius: 15px;
     border-color: transparent;
     width: 30%;
-    padding: 10px;
+    padding: 0.75em;
     align-items: center;
     margin-left: 30%;
     margin-top: 2em;
 }
 
-.ContactMenue{
+.ContactMenue {
     padding-top: 8em;
     padding-bottom: 4em;
     padding-right: 7em;
     color: #252b33;
 }
-#ContactIcone{
+
+#ContactIcone {
     margin-right: 1em;
 }
 
-footer{
-color: #252b33;
-font-family: "Audiowide", sans-serif;
-margin-left: 10em;
-margin: 2em;
+footer {
+    color: #252b33;
+    font-family: "Audiowide", sans-serif;
+    margin-left: 10em;
+    margin: 2em;
 }
 
-.popup{
-    background-color: white;
-    text-align: center;
-    font-family: "Poppins", sans-serif;
-    width: 50%;
-    height: 70%;
-    border-radius: 10px;
-    border-style: double;
-    position: absolute;
-    transform: translate(50%, -100%);
-    visibility: hidden;
-}
-.openpopup1{
-    visibility: visible;
-}
-.openpopup2{
-    visibility: visible;
-}
-.openpopup3{
-    visibility: visible;
-}
-.openpopup4{
-    visibility: visible;
-}
-.openpopup5{
-    visibility: visible;
-}
-.openpopup6{
-    visibility: visible;
-}
-.openpopup7{
-    visibility: visible;
-}
+@media screen and (max-width: 430px) {
+    #HomeMenue {
+        visibility: hidden;
+    }
 
-.popup h1{
-    color: black ;
-    font-size: 2em; 
-    padding: 1em;
-}
-.popup p{
-color: #252b33;
-padding: 1em;
-}
-.popup img{
-    width: 150px;
-    height: 150px;
-}
-.popup button{
-background-color: #20BCD1;
-color: white;
-cursor: pointer;
-border-radius: 10px;
-border-color: transparent;
-width: 20%;
-margin-top: 1em;
+    #burgerMenue {
+        visibility: visible;
+        display: flex;
+        background-color: black;
+        position: fixed;
+    }
+
+    #burgerMenue img {
+        width: 20%;
+        height: fit-content;
+    }
+
+    #burgerMenue i {
+        padding-top: 2em;
+        padding-right: 2em;
+        cursor: pointer;
+    }
+    .openMenuIcone{
+        visibility: visible;
+    }
+
+    .HomeFlex {
+        flex-direction: column;
+        margin-left: 0em;
+        margin-top: 0em;
+        gap: 0em;
+        padding-top: 8em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    h3 {
+        font-size: 1em;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .AboutMe {
+        margin: 3em;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+    .AboutList {
+        flex-direction: column;
+        margin-left: 1em;
+    }
+
+    .CvBtn {
+        margin-left: 1em;
+    }
+
+    #ProjectMenue {
+        gap: 3%;
+        font-size: 0.5em;
+    }
+
+    .popup {
+        transform: translate(50%, -300%);
+    }
+
+    h5 {
+        font-size: 0.5em;
+    }
+
+    #SkillsItems {
+        flex-direction: column;
+        gap: 0%;
+        margin-top: 3em;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+    section {
+        margin-bottom: 1em;
+    }
+
+    .ProgressBar {
+        font-size: 0.5em;
+    }
+
+    #ServicesFlex {
+        flex-direction: column;
+        gap: 0%;
+    }
+
+    .MyServices {
+        margin-left: 1em;
+    }
+
+    h5 {
+        font-size: 1em;
+    }
+
+    .MyServices p {
+        font-size: 0.75em;
+    }
+
+    .Quote {
+        font-size: 0.5em;
+    }
+
+
+    .ContactFlex {
+        flex-direction: column-reverse;
+    }
+
+    h4 {
+        font-size: 1em;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    textarea {
+        width: 100%;
+    }
+
+    .ContactBtn {
+        width: 100%;
+        align-items: center;
+        margin-left: 0%;
+        margin-top: 2em;
+    }
+
+    .ContactMenue {
+        padding-top: 2em;
+        padding-bottom: 0em;
+        padding-right: Oem;
+        text-align: center;
+    }
+
+    #ContactIcone {
+        margin-right: 0.5em;
+        margin-left: 0.5em;
+    }
+
+    footer {
+        font-size: 0.75em;
+        margin-left: 0em;
+        margin: 2em;
+    }
 }
