@@ -63,7 +63,7 @@ function closePopupWeather(){
 // })
 
 // burger menu
-function toggleMenu(){
-  const HomeMenu = document.getElementsById('HomeMenu');
-  HomeMenu.classList.toggle("showMenu")
+function toggleMenu() {
+  const HomeMenu = document.getElementById('HomeMenu');
+  HomeMenu.classList.toggle("showMenu");
 }

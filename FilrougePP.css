@@ -389,7 +389,7 @@ footer {
 
 @media screen and (max-width: 430px) {
     #HomeMenu {
-        visibility: hidden;
+        display: none;
     }
 
     #burgerMenu {
@@ -409,9 +409,8 @@ footer {
         padding-right: 2em;
         cursor: pointer;
     }
-    #HomeMenu.showMenu{
-        display: block;
-
+    #HomeMenu.showMenu {
+        display: flex;
     }
 
     .HomeFlex {
