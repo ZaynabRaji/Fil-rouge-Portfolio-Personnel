@@ -24,10 +24,10 @@
       <li><a href="#BlogSection">Blog</a></li>
       <li><a href="#ContactSection">Contact</a></li>
     </ul>
-<ul id="burgerMenu">
-  <li><img src="LOGO.png" alt="logo portfolio"></li>
-  <li id="MenuIcone" onclick="toggleMenu()"><i class="fa-solid fa-bars" style="color: #20bcd1;"></i></li>
-</ul>
+    <ul id="burgerMenu">
+      <li><img src="LOGO.png" alt="logo portfolio"></li>
+      <li id="MenuIcone" onclick="toggleMenu()"><i class="fa-solid fa-bars" style="color: #20bcd1;"></i></li>
+    </ul>
     <div class="HomeFlex">
 
       <div>
@@ -65,26 +65,26 @@
       </li>
       <li><span>From : </span><br />Marrakesh, Morocco</li>
     </ul>
-<a href="Zaynab RAJI - CV.pdf" download="CV"><button class="CvBtn" type="button">Download CV</button></a>
-    
+    <a href="Zaynab RAJI - CV.pdf" download="CV"><button class="CvBtn" type="button">Download CV</button></a>
+
   </div>
 
   <div id="ProjectSection">
     <h1>My work</h1>
-    <ul id="ProjectMenu">
-      <li class="ProjectList">All</li>
-      <li class="ProjectList">HTML / CSS</li>
-      <li class="ProjectList">JavaScript</li>
-      <li class="ProjectList">API</li>
-    </ul>
+    <div id="ProjectMenu">
+      <button class="ProjectList Active" onclick="filterSelection('all')">All</button>
+      <button class="ProjectList" onclick="filterSelection('htmlcss')">HTML / CSS</button>
+      <button class="ProjectList" onclick="filterSelection('javascript')">JavaScript</button>
+      <button class="ProjectList" onclick="filterSelection('api')">API</button>
+    </div>
     <div class="Projects">
-      <img src="1SweetRecipes.png" alt="Sweet Recipes" class="ProjectImg" onclick="openPopupRecipes()" />
-      <img src="2MTS2025.png" alt="Morocco Tech Summit 2025" class="ProjectImg" onclick="openPopupMTS()" />
-      <img src="3Portfolio.jpg" alt="Portfolio Personnel" class="ProjectImg" onclick="openPopupPortfolio()" />
-      <img src="4NoteApp.png" alt="Note Taking App" class="ProjectImg" onclick="openPopupNote()" />
-      <img src="5TodoList.png" alt="To do list App" class="ProjectImg" onclick="openPopupTodo()" />
-      <img src="6MealPlanner.jpeg" alt="Meal Planner App" class="ProjectImg" onclick="openPopupMeal()" />
-      <img src="7WeatherApp.png" alt="Weather App" class="ProjectImg" onclick="openPopupWeather()" />
+      <img src="1SweetRecipes.png" alt="Sweet Recipes" class="ProjectImg filter htmlcss" onclick="openPopupRecipes()" />
+      <img src="2MTS2025.png" alt="Morocco Tech Summit 2025" class="ProjectImg filter htmlcss" onclick="openPopupMTS()" />
+      <img src="3Portfolio.jpg" alt="Portfolio Personnel" class="ProjectImg filter htmlcss" onclick="openPopupPortfolio()" />
+      <img src="4NoteApp.png" alt="Note Taking App" class="ProjectImg javascript" onclick="openPopupNote()" />
+      <img src="5TodoList.png" alt="To do list App" class="ProjectImg javascript" onclick="openPopupTodo()" />
+      <img src="6MealPlanner.jpeg" alt="Meal Planner App" class="ProjectImg javascript" onclick="openPopupMeal()" />
+      <img src="7WeatherApp.png" alt="Weather App" class="ProjectImg api" onclick="openPopupWeather()" />
     </div>
     <!-- popup for project details -->
     <div id="ProjectContainer">
@@ -92,9 +92,7 @@
         <h1>Sweet Recipes App</h1>
         <img src="1SweetRecipes.png" alt="picture of the website" />
         <p>This is a site for finding sweet Recipes</p>
-        <button id="exitbtn" type="button" onclick="closePopupRecipes()">
-          Exit
-        </button>
+        <button id="exitbtn" type="button" onclick="closePopupRecipes()">Exit</button>
       </div>
       <div class="popup" id="popupMTS">
         <h1>Morocco Tech Summit 2025</h1>
