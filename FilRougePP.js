@@ -72,7 +72,7 @@ function toggleMenu() {
 filterSelection("all");
 function filterSelection(c){
   var x, i;
-  x = document.getElementByClassName("filter");
+  x = document.querySelector("filter");
   if (c == "all") c = "";
   for (i = 0; i < x.lenght; i++) {
     removeClass(x[i], "show");

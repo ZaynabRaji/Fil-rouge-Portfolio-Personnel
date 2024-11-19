@@ -1,6 +1,6 @@
 * {
-    margin: 0%;
-    padding: 0%;
+    margin: 0;
+    padding: 0;
     font-family: "Trirong", serif;
 }
 
@@ -150,7 +150,7 @@ span {
     color: white;
     margin: 2em;
     padding: 0.8rem 2.6rem;
-    margin-left: 40%;
+    margin-left: 45%;
     margin-bottom: 5em;
 }
 .CvBtn:hover{
@@ -352,7 +352,6 @@ section {
     border: 5px double #D1BC20;
     margin: 2em;
     padding: 1em;
-    cursor: pointer;
 }
 .BlogItems img{
     width: 200px;
@@ -361,6 +360,15 @@ section {
 .BlogItems p{
     text-align: justify;
     margin: 1em;
+}
+.BlogItems a{
+    font-weight: bolder;
+    align-content: right;
+    color: #20BCD1;
+    cursor: pointer;
+}
+.BlogItems a:hover{
+    color: #D1BC20;
 }
 .BlogItems button{
 margin-left: 60%;
@@ -372,7 +380,6 @@ color: #20BCD1;
 }
 
 .BlogDetails{
-    /* display: none; */
     margin: 3em;
     text-align: justify;
 }
@@ -503,7 +510,7 @@ footer {
         padding-right: 2em;
         cursor: pointer;
     }
-    #HomeMenu.showMenu {
+    .showMenu {
         display: flex;
     }
 
@@ -607,27 +614,32 @@ footer {
     h4 {
         font-size: 1em;
     }
+.ContactForm{
+    display: flex;
+    flex-direction: column;
+/*  */
+}
+    .ContactForm input {
+         /*  */
 
-    input {
-        width: 100%;
     }
 
     textarea {
-        width: 100%;
+
     }
 
     .ContactBtn {
-        width: 100%;
+        width: 60%;
         align-items: center;
         margin-left: 0%;
-        margin-top: 2em;
+        margin-top: 1em;
     }
 
     .ContactMenu {
         padding-top: 2em;
         padding-bottom: 0em;
         padding-right: Oem;
-        text-align: center;
+        text-align: left;
     }
 
     #ContactIcone {
