@@ -433,7 +433,7 @@ color: #20BCD1;
 }
 
 #ContactSection input {
-    width: 40%;
+    width: 48%;
     height: 2.5em;
     margin-bottom: 1em;
     border: solid #dae1e3;
@@ -441,7 +441,7 @@ color: #20BCD1;
 }
 
 #ContactSection textarea {
-    width: 83%;
+    width: 98%;
     border: solid #dae1e3;
     padding-left: 1em;
 }
@@ -619,13 +619,13 @@ footer {
     flex-direction: column;
 /*  */
 }
-    .ContactForm input {
-         /*  */
+#ContactSection input {
+    width: 100%;
 
     }
 
-    textarea {
-
+    #ContactSection textarea {
+width: 100%;
     }
 
     .ContactBtn {
