@@ -1,4 +1,25 @@
 // 1
+// const popupRecipes = document.getElementById("popupRecipes");
+
+// function openPopupRecipes() {
+//     popupRecipes.classList.add("openpopup1");
+//     // Add event listener to close the popup when clicking outside
+//     document.addEventListener("click", handleOutsideClick);
+// }
+
+// function closePopupRecipes() {
+//     popupRecipes.classList.remove("openpopup1");
+//     // Remove the event listener to avoid redundant checks
+//     document.removeEventListener("click", handleOutsideClick);
+// }
+
+// function handleOutsideClick(event) {
+//     // Check if the click is outside the popup
+//     if (!popupRecipes.contains(event.target)) {
+//         closePopupRecipes();
+//     }
+// }
+
 const popupRecipes = document.getElementById("popupRecipes");
 function openPopupRecipes(){
   popupRecipes.classList.add("openpopup1");
@@ -6,6 +27,7 @@ function openPopupRecipes(){
 function closePopupRecipes(){
   popupRecipes.classList.remove("openpopup1");
 }
+
 // 2
 const popupMTS = document.getElementById("popupMTS");
 function openPopupMTS(){
@@ -55,55 +77,17 @@ function closePopupWeather(){
   popupWeather.classList.remove("openpopup7");
 }
 
-// const popup = document.getElementsById('ProjectContainer');
-// popup.addEventListener('click', (event) => {
-//   if (event.target == popup){
-//     popup.close();
-//   }
-// })
 
-// burger menu
+// burger menu NOT WORKING 
 function toggleMenu() {
-  const HomeMenu = document.getElementById('HomeMenu');
-  HomeMenu.classList.toggle("showMenu");
+  const homeMenu = document.getElementById('HomeMenu');
+  homeMenu.classList.toggle('showMenu');
 }
 
-// Filter Projects
-filterSelection("all");
-function filterSelection(c){
-  var x, i;
-  x = document.querySelector("filter");
-  if (c == "all") c = "";
-  for (i = 0; i < x.lenght; i++) {
-    removeClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) addClass(x[i], "show");
-  }
-}
-function addClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-  }
-}
-function removeClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);     
-    }
-  }
-  element.className = arr1.join(" ");
-}
-var ProjectMenu = document.getElementById("ProjectMenu");
-var ProjectList = ProjectMenu.getElementsByClassName("ProjectList");
-for (var i = 0; i < btns.length; i++) {
-  ProjectList[i].addEventListener("click", function(){
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
+// footer : date and time
+setInterval(myTimer, 1000);
+
+function myTimer() {
+const datetime = new Date().toLocaleString();
+  document.getElementById("DateTime").innerHTML = datetime;
 }

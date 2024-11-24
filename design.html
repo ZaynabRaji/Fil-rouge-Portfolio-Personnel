@@ -4,11 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong|Poppins" />
     <link rel="stylesheet" href="FilrougePP.css" />
     <title>Z.RAJI / Blog / Design Thinking</title>
 </head>
 
 <body>
+    <ul id="HomeMenu" class="MenuList">
+        <li>
+          <a href="#HomeSection"><img src="LOGO.png" alt="logo portfolio" id="Logo" /></a>
+        </li>
+        <li><a href="#HomeSection">Home</a></li>
+        <li><a href="#AboutSection">About</a></li>
+        <li><a href="#ProjectSection">Project</a></li>
+        <li><a href="#SkillsSection">Skills</a></li>
+        <li><a href="#ServicesSection">Services</a></li>
+        <li><a href="#BlogSection">Blog</a></li>
+        <li><a href="#ContactSection">Contact</a></li>
+      </ul>
+      <ul id="burgerMenu">
+        <li><img src="LOGO.png" alt="logo portfolio"></li>
+        <li id="MenuIcone" onclick="toggleMenu()"><i class="fa-solid fa-bars" style="color: #20bcd1;"></i></li>
+      </ul>
+
     <div class="BlogDetails">
         <h1>Design Thinking Process</h1>
         <p>Here’s what you need to know about this creative problem-solving technique, including a definition and why
@@ -31,6 +50,14 @@
             <li><span>Test (test): </span>The user tests the prototype and gives feedback</li>
         </ol>
     </div>
+    <footer>
+        <p>
+          Copyright 2024 <a href="#HomeSection">RAJI</a>. All Rights Reserved.
+        </p>
+      </footer>
+
+      <script src="FilRougePP.js"></script>
+      
 </body>
 
 </html>

@@ -29,7 +29,6 @@
       <li id="MenuIcone" onclick="toggleMenu()"><i class="fa-solid fa-bars" style="color: #20bcd1;"></i></li>
     </ul>
     <div class="HomeFlex">
-
       <div>
         <h3>Welcome</h3>
         <h2>I’am Zaynab RAJI, a web designer.</h2>
@@ -66,28 +65,36 @@
       <li><span>From : </span><br />Marrakesh, Morocco</li>
     </ul>
     <a href="Zaynab RAJI - CV.pdf" download="CV"><button class="CvBtn" type="button">Download CV</button></a>
-
   </div>
 
   <div id="ProjectSection">
     <h1>My work</h1>
-    <div id="ProjectMenu">
-      <button class="ProjectList Active" onclick="filterSelection('all')">All</button>
-      <button class="ProjectList" onclick="filterSelection('htmlcss')">HTML / CSS</button>
-      <button class="ProjectList" onclick="filterSelection('javascript')">JavaScript</button>
-      <button class="ProjectList" onclick="filterSelection('api')">API</button>
-    </div>
+    
+  <!-- Combine the radio inputs and the gallery in the same container -->
+  <div class="filterMenu">
+    <input type="radio" name="filter" id="filterAll" checked>
+    <label for="filterAll">All</label>
+
+    <input type="radio" name="filter" id="filterHtml">
+    <label for="filterHtml">HTML / CSS</label>
+
+    <input type="radio" name="filter" id="filterJs">
+    <label for="filterJs">JavaScript</label>
+
+    <input type="radio" name="filter" id="filterApi">
+    <label for="filterApi">API</label>
+
+    <!-- Projects container must be a sibling of the inputs for `~` to work -->
     <div class="Projects">
-      <img src="1SweetRecipes.png" alt="Sweet Recipes" class="ProjectImg filter htmlcss" onclick="openPopupRecipes()" />
-      <img src="2MTS2025.png" alt="Morocco Tech Summit 2025" class="ProjectImg filter htmlcss"
-        onclick="openPopupMTS()" />
-      <img src="3Portfolio.jpg" alt="Portfolio Personnel" class="ProjectImg filter htmlcss"
-        onclick="openPopupPortfolio()" />
-      <img src="4NoteApp.png" alt="Note Taking App" class="ProjectImg javascript" onclick="openPopupNote()" />
-      <img src="5TodoList.png" alt="To do list App" class="ProjectImg javascript" onclick="openPopupTodo()" />
-      <img src="6MealPlanner.jpeg" alt="Meal Planner App" class="ProjectImg javascript" onclick="openPopupMeal()" />
-      <img src="7WeatherApp.png" alt="Weather App" class="ProjectImg api" onclick="openPopupWeather()" />
+      <img src="1SweetRecipes.png" alt="Sweet Recipes" class="ProjectImg Html" onclick="openPopupRecipes()" />
+      <img src="2MTS2025.png" alt="Morocco Tech Summit 2025" class="ProjectImg Html" onclick="openPopupMTS()" />
+      <img src="3Portfolio.jpg" alt="Portfolio Personnel" class="ProjectImg Html" onclick="openPopupPortfolio()" />
+      <img src="4NoteApp.png" alt="Note Taking App" class="ProjectImg Js"  onclick="openPopupNote()" />
+      <img src="5TodoList.png" alt="To do list App" class="ProjectImg Js" onclick="openPopupTodo()" />
+      <img src="6MealPlanner.jpeg" alt="Meal Planner App" class="ProjectImg Js Html" onclick="openPopupMeal()" />
+      <img src="7WeatherApp.png" alt="Weather App" class="ProjectImg Js Api" onclick="openPopupWeather()" />
     </div>
+  </div>
     <!-- popup for project details -->
     <div id="ProjectContainer">
       <div class="popup" id="popupRecipes">
@@ -95,7 +102,8 @@
         <a href="http://swwetrecipes.github.pages/"><img src="1SweetRecipes.png" alt="picture of the website" /></a>
         <p>This is a site for finding sweet Recipes
           <br>
-          <a href="https://github.com/ZaynabRaji/Sweet-recipes.git">Sweet Recipes - Github Link</a>
+          <a href="https://github.com/ZaynabRaji/Sweet-recipes.git"><i class="fa-brands fa-github"></i></a>
+          <a href="https://zaynabraji.github.io/Sweet-recipes/Recette.HTML"><i class="fa-solid fa-link"></i></a>
         </p>
         <button id="exitbtn" type="button" onclick="closePopupRecipes()">Exit</button>
       </div>
@@ -105,7 +113,8 @@
         <p>
           This is the landing page of the Morocco Tech Summit 2025 website
           <br />
-          <a href="https://github.com/ZaynabRaji/MTS2025.git">MTS2025 - Github Link</a>
+          <a href="https://github.com/ZaynabRaji/MTS2025.git"><i class="fa-brands fa-github"></i></a>
+          <a href="https://zaynabraji.github.io/MTS2025/TAF_MTS2025/MoroccoTechSummit.html"><i class="fa-solid fa-link"></i></a>
         </p>
         <button id="exitbtn" type="button" onclick="closePopupMTS()">
           Exit
@@ -116,7 +125,8 @@
         <img src="3Portfolio.jpg" alt="picture of the website" />
         <p>
           This is a personal portfolio website <br />
-          <a href="https://github.com/ZaynabRaji/-Portfolio-Personnel.git">Personal Portfolio - Github Link</a>
+          <a href="https://github.com/ZaynabRaji/-Portfolio-Personnel.git"><i class="fa-brands fa-github"></i></a>
+          <a href="https://zaynabraji.github.io/-Portfolio-Personnel/Index"><i class="fa-solid fa-link"></i></a>
         </p>
         <button id="exitbtn" type="button" onclick="closePopupPortfolio()">
           Exit
@@ -127,7 +137,8 @@
         <img src="4NoteApp.png" alt="picture of the website" />
         <p>
           This is an application for taking notes <br />
-          <a href="https://github.com/ZaynabRaji/application-for-taking-notes.git">Brain Binder - Github Link</a>
+          <a href="https://github.com/ZaynabRaji/application-for-taking-notes.git"><i class="fa-brands fa-github"></i></a>
+          <a href="https://zaynabraji.github.io/application-for-taking-notes/noteapp"><i class="fa-solid fa-link"></i></a>
         </p>
         <button id="exitbtn" type="button" onclick="closePopupNote()">
           Exit
@@ -138,7 +149,8 @@
         <img src="5TodoList.png" alt="picture of the website" />
         <p>
           This is an application for creating ToDo lists <br />
-          <a href="https://github.com/ZaynabRaji/To-do-list-app.git">ToDo List - Github Link</a>
+          <a href="https://github.com/ZaynabRaji/To-do-list-app.git"><i class="fa-brands fa-github"></i></a>
+          <a href="https://zaynabraji.github.io/To-do-list-app/Todolist.html"><i class="fa-solid fa-link"></i></a>
         </p>
         <button id="exitbtn" type="button" onclick="closePopupTodo()">
           Exit
@@ -149,7 +161,8 @@
         <img src="6MealPlanner.jpeg" alt="picture of the website" />
         <p>
           This is an application to plan and save your meals in advance <br />
-          <a href="https://github.com/ZaynabRaji/Yummy-App-27-08-06-09.git">Yummy APP - Github Link</a>
+          <a href="https://github.com/ZaynabRaji/Yummy-App-27-08-06-09.git"><i class="fa-brands fa-github"></i></a>
+          <a href="https://zaynabraji.github.io/Yummy-App-27-08-06-09/Yummyapp"><i class="fa-solid fa-link"></i></a>
         </p>
         <button id="exitbtn" type="button" onclick="closePopupMeal()">
           Exit
@@ -160,8 +173,8 @@
         <img src="7WeatherApp.png" alt="picture of the website" />
         <p>
           This is an application foc checking the weather by city <br />
-          <a href="https://github.com/ZaynabRaji/Weather-app.git">
-            Taqs Track - Github Link</a>
+          <a href="https://github.com/ZaynabRaji/Weather-app.git"><i class="fa-brands fa-github"></i></a>
+            <a href="https://zaynabraji.github.io/Weather-app/Weather"><i class="fa-solid fa-link"></i></a>
         </p>
         <button id="exitbtn" type="button" onclick="closePopupWeather()">
           Exit
@@ -325,6 +338,7 @@
     <p>
       Copyright 2024 <a href="#HomeSection">RAJI</a>. All Rights Reserved.
     </p>
+    <p id="DateTime"></p>
   </footer>
 
   <script src="https://smtpjs.com/v3/smtp.js"></script>

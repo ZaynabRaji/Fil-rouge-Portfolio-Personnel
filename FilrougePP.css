@@ -24,7 +24,7 @@
 }
 
 #burgerMenu {
-    visibility: hidden;
+    display: none;
     cursor: pointer;
     position: fixed;
 }
@@ -162,28 +162,34 @@ span {
     padding-bottom: 5em;
 }
 
-#ProjectMenu {
-    display: flex;
-    justify-content: center;
-    gap: 5%;
-    color: #20BCD1;
-    font-size: 1em;
-    margin: 2em;
+/* Hide the radio inputs */
+.filterMenu input[type="radio"] {
+    display: none;
+  }
+
+.filterMenu{
+    margin-top: 3em;
+    margin-left: 10em;
+    margin-right: 10em;
 }
-.ProjectList{
-    background: none;
-    border: none;
-    color: #20BCD1;
+  .filterMenu label {
     cursor: pointer;
-}
-.ProjectList:hover {
-    color: #D1BC20;
+    text-align: center;
+    font-size: 1em;
+    color: #20BCD1;
+padding: 0.5em;
+    margin-left: 13%;
   }
-  
-  .ProjectList.active {
-    background-color: white;
+
+  /* Highlight the selected filter */
+  .filterMenu input[type="radio"]:checked + label {
+    background: #D1BC20;
+    color: white;
   }
-.ProjectImg {
+
+  /* Hide all project images by default */
+  .ProjectImg {
+    display: none;
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -197,9 +203,22 @@ span {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-left: 10em;
-    margin-right: 10em;
+   
+    margin-top: 3em;
 }
+  /* Show items based on filter */
+  #filterAll:checked ~ .Projects .ProjectImg {
+    display: block;
+  }
+  #filterHtml:checked ~ .Projects .Html {
+    display: block;
+  }
+  #filterJs:checked ~ .Projects .Js {
+    display: block;
+  }
+  #filterApi:checked ~ .Projects .Api {
+    display: block;
+  }
 
 /* Fenetre Popup */
 .popup {
@@ -253,7 +272,13 @@ span {
     color: #252b33;
     padding: 1em;
 }
-
+.popup i{
+    font-size: larger;
+    padding: 1em;
+}
+.popup i:hover{
+    color: #D1BC20;
+}
 .popup img {
     width: 150px;
     height: 150px;
@@ -336,7 +361,6 @@ section {
     color: #20BCD1;
 }
 
-
 #BlogSection {
     padding-top: 5em;
     padding-bottom: 5em;
@@ -380,18 +404,21 @@ color: #20BCD1;
 }
 
 .BlogDetails{
-    margin: 3em;
     text-align: justify;
+    margin-top: 8em;
+    margin-left: 10em;
+    margin-right: 10em;
+    margin-bottom: 3em;
 }
 .BlogDetails h1{
     margin-bottom: 2em;
 }
 .BlogDetails img{
-    width: 40%;
+    width: 30%;
     height: fit-content;
     margin-top: 2em;
     margin-bottom: 2em;
-    margin-left: 30%;
+    margin-left: 35%;
 }
 .BlogDetails h2{
     margin: 1em;
@@ -410,20 +437,14 @@ color: #20BCD1;
     margin-left: 5em;
 }
 
-
-
-
-
 #ContactSection {
     background-color: #f5f5f5;
     padding: 5em;
-
 }
 
 .ContactFlex {
     display: flex;
     align-items: center;
-
 }
 
 #ContactSection h4 {
@@ -486,8 +507,13 @@ footer {
     font-family: "Audiowide", sans-serif;
     margin-left: 10em;
     margin: 2em;
+    display: flex;
+    justify-content: space-between;
 }
-
+#DateTime{
+    font-weight: bolder;
+    color: #20BCD1;
+}
 @media screen and (max-width: 430px) {
     #HomeMenu {
         display: none;
@@ -512,6 +538,14 @@ footer {
     }
     .showMenu {
         display: flex;
+    flex-direction: column; /* Stack items vertically */
+    position: absolute; /* Ensure it stays in place */
+    top: 50px; /* Adjust below the burger icon */
+    left: 0;
+    background-color: black;
+    width: 100%; /* Full-width for small screens */
+    padding: 0;
+    z-index: 10; /* Ensure it appears above other elements */
     }
 
     .HomeFlex {
@@ -550,12 +584,13 @@ footer {
     .CvBtn {
         margin-left: 1em;
     }
-
-    #ProjectMenu {
-        gap: 3%;
-        font-size: 0.5em;
+    .filterMenu{
+        margin-left: 0;
+        margin-right: 0;
     }
-
+    .filterMenu label{
+        margin-left: 6%;
+    }
     .popup {
         transform: translate(50%, -300%);
     }
@@ -603,10 +638,16 @@ footer {
     #BlogFlex{
         flex-wrap: wrap;
     }
-    .BlogItems{
-        
-    }
 
+    .BlogDetails{
+        margin-top: 0;
+        margin-left: 1em;
+        margin-right: 1em;
+        margin-bottom: 3em;
+    }
+    .BlogDetails h1{
+padding-top: 3em;
+    }
     .ContactFlex {
         flex-direction: column-reverse;
     }
