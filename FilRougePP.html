@@ -70,7 +70,7 @@
   <div id="ProjectSection">
     <h1>My work</h1>
 
-    <!-- Combine the radio inputs and the gallery in the same container -->
+    <!-- 1 I should Combine the radio inputs and the gallery in the same container -->
     <div class="filterMenu">
       <input type="radio" name="filter" id="filterAll" checked>
       <label for="filterAll">All</label>
@@ -84,7 +84,7 @@
       <input type="radio" name="filter" id="filterApi">
       <label for="filterApi">API</label>
 
-      <!-- Projects container must be a sibling of the inputs for `~` to work -->
+      <!-- 2 Projects container must be a sibling of the inputs for `~` to work -->
       <div class="Projects">
         <img src="1SweetRecipes.png" alt="Sweet Recipes" class="ProjectImg Html" onclick="openPopupRecipes()" />
         <img src="2MTS2025.png" alt="Morocco Tech Summit 2025" class="ProjectImg Html" onclick="openPopupMTS()" />
@@ -95,6 +95,7 @@
         <img src="7WeatherApp.png" alt="Weather App" class="ProjectImg Js Api" onclick="openPopupWeather()" />
       </div>
     </div>
+
     <!-- popup for project details -->
     <div id="ProjectContainer">
       <div class="popup" id="popupRecipes">
@@ -247,22 +248,19 @@
       <div class="MyServices">
         <h5>Customized Web & web App Development</h5>
         <p>
-          Creating a custom software application depending on your specific
-          business needs.
+          Creating a custom software application depending on your specific business needs.
         </p>
       </div>
       <div class="MyServices">
         <h5>Full-stack Development</h5>
         <p>
-          Developing both the frontend (user-facing) and backend (database and
-          logic) of applications.
+          Developing both the frontend (user-facing) and backend (database and logic) of applications.
         </p>
       </div>
       <div class="MyServices">
         <h5>Website Maintenance Services</h5>
         <p>
-          Backing up your site regularly and monitoring your site's
-          performance.
+          Backing up your site regularly and monitoring your site's performance.
         </p>
       </div>
       <div class="MyServices">
@@ -270,8 +268,9 @@
         <p>Designing websites to adapt to a user's device.</p>
       </div>
     </div>
-    <p class="Quote">"Success in web development comes from perseverance and curiosity. <br>
-      Embrace every challenge as a learning opportunity, and remember that every expert was once a beginner."</p>
+    <p class="Quote">
+      "Success in web development comes from perseverance and curiosity. <br> Embrace every challenge as a learning
+      opportunity, and remember that every expert was once a beginner."</p>
   </div>
 
   <div id="BlogSection">
@@ -319,9 +318,11 @@
           <li>
             <span> Follow me : </span><br />
             <a href="https://x.com/RajiZayna"><i class="fa-brands fa-x-twitter" id="ContactIcone"></i></a>
-            <a href="https://www.linkedin.com/in/zaynab-raji-80368147/"><i class="fa-brands fa-linkedin" id="ContactIcone"></i></a>
+            <a href="https://www.linkedin.com/in/zaynab-raji-80368147/"><i class="fa-brands fa-linkedin"
+                id="ContactIcone"></i></a>
             <a href="https://github.com/ZaynabRaji"><i class="fa-brands fa-github" id="ContactIcone"></i></a>
-            <a href="https://www.figma.com/files/team/1400892510291914817/recents-and-sharing?fuid=1400892508359930469"><i class="fa-brands fa-figma" id="ContactIcone"></i></a>
+            <a href="https://www.figma.com/files/team/1400892510291914817/recents-and-sharing?fuid=1400892508359930469"><i
+                class="fa-brands fa-figma" id="ContactIcone"></i></a>
           </li>
         </ul>
       </section>
@@ -330,7 +331,7 @@
           <h4>Send us a note</h4>
           <input type="text" name="name" placeholder="Name" required />
           <input type="email" name="email" placeholder="Email" required /><br />
-          <textarea name="Message" placeholder="how can i help you ?" cols="75" rows="10" required></textarea><br />
+          <textarea name="Message" placeholder="how can i help you ?" rows="10" required></textarea><br />
           <button class="ContactBtn" type="submit">Send Message</button>
         </form>
       </section>

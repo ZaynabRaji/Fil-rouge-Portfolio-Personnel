@@ -19,7 +19,8 @@
     top: 0%;
     width: 100%;
 }
-#HomeMenu li:hover{
+
+#HomeMenu li:hover {
     font-size: larger;
 }
 
@@ -102,10 +103,12 @@ a {
     padding: 0.8rem 2.6rem;
     border-width: 4px;
 }
-.HireBtn:hover{
+
+.HireBtn:hover {
     font-size: larger;
     border-color: #D1BC20;
 }
+
 #AboutSection {
     margin-top: 5em;
 }
@@ -153,42 +156,47 @@ span {
     margin-bottom: 5em;
     margin-top: 2em;
 }
-.CvBtn:hover{
+
+.CvBtn:hover {
     color: black;
 }
+
 #ProjectSection {
     background-color: #f5f5f5;
     padding-top: 5em;
     padding-bottom: 5em;
 }
 
-/* Hide the radio inputs */
+/* FILTER MENU WITH CSS : */
+
+/*1 Hide the radio inputs */
 .filterMenu input[type="radio"] {
     display: none;
-  }
+}
 
-.filterMenu{
+.filterMenu {
     margin-top: 3em;
     margin-left: 10em;
     margin-right: 10em;
 }
-  .filterMenu label {
+
+.filterMenu label {
     cursor: pointer;
     text-align: center;
     font-size: 1em;
     color: #20BCD1;
-padding: 0.5em;
+    padding: 0.5em;
     margin-left: 13%;
-  }
+}
 
-  /* Highlight the selected filter */
-  .filterMenu input[type="radio"]:checked + label {
+/*2 Highlight the selected filter */
+.filterMenu input[type="radio"]:checked+label {
     background: #D1BC20;
     color: white;
-  }
+}
 
-  /* Hide all project images by default */
-  .ProjectImg {
+/*3 Hide all project images by default */
+.ProjectImg {
     display: none;
     width: 200px;
     height: 200px;
@@ -196,29 +204,35 @@ padding: 0.5em;
     margin: 1em;
     cursor: pointer;
 }
-.ProjectImg:hover{
+
+.ProjectImg:hover {
     transform: scale(1.1)
 }
+
 .Projects {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-   
+
     margin-top: 3em;
 }
-  /* Show items based on filter */
-  #filterAll:checked ~ .Projects .ProjectImg {
+
+/*4 Show items based on filter */
+#filterAll:checked~.Projects .ProjectImg {
     display: block;
-  }
-  #filterHtml:checked ~ .Projects .Html {
+}
+
+#filterHtml:checked~.Projects .Html {
     display: block;
-  }
-  #filterJs:checked ~ .Projects .Js {
+}
+
+#filterJs:checked~.Projects .Js {
     display: block;
-  }
-  #filterApi:checked ~ .Projects .Api {
+}
+
+#filterApi:checked~.Projects .Api {
     display: block;
-  }
+}
 
 /* Fenetre Popup */
 .popup {
@@ -272,13 +286,16 @@ padding: 0.5em;
     color: #252b33;
     padding: 1em;
 }
-.popup i{
+
+.popup i {
     font-size: larger;
     padding: 1em;
 }
-.popup i:hover{
+
+.popup i:hover {
     color: #D1BC20;
 }
+
 .popup img {
     width: 150px;
     height: 150px;
@@ -350,10 +367,12 @@ section {
     text-align: center;
     background-color: white;
 }
-.MyServices h5{
+
+.MyServices h5 {
     margin-bottom: 1em;
     color: #20BCD1;
 }
+
 .Quote {
     margin-top: 5em;
     text-align: center;
@@ -365,75 +384,88 @@ section {
     padding-top: 5em;
     padding-bottom: 5em;
 }
-#BlogFlex{
+
+#BlogFlex {
     display: flex;
     flex-wrap: nowrap;
     margin-top: 3em;
     justify-content: center;
 }
-.BlogItems{
+
+.BlogItems {
     text-align: center;
     border: 5px double #D1BC20;
     margin: 2em;
     padding: 1em;
 }
-.BlogItems img{
+
+.BlogItems img {
     width: 200px;
     height: 200px;
 }
-.BlogItems p{
+
+.BlogItems p {
     text-align: justify;
     margin: 1em;
 }
-.BlogItems a{
+
+.BlogItems a {
     font-weight: bolder;
     align-content: right;
     color: #20BCD1;
     cursor: pointer;
 }
-.BlogItems a:hover{
+
+.BlogItems a:hover {
     color: #D1BC20;
 }
-.BlogItems button{
-margin-left: 60%;
-background-color: none;
-border-radius: 50%;
-border-color: #20BCD1;
-width: 25%;
-color: #20BCD1;
+
+.BlogItems button {
+    margin-left: 60%;
+    background-color: none;
+    border-radius: 50%;
+    border-color: #20BCD1;
+    width: 25%;
+    color: #20BCD1;
 }
 
-.BlogDetails{
+.BlogDetails {
     text-align: justify;
     margin-top: 8em;
     margin-left: 10em;
     margin-right: 10em;
     margin-bottom: 3em;
 }
-.BlogDetails h1{
+
+.BlogDetails h1 {
     margin-bottom: 2em;
 }
-.BlogDetails img{
+
+.BlogDetails img {
     width: 30%;
     height: fit-content;
     margin-top: 2em;
     margin-bottom: 2em;
     margin-left: 35%;
 }
-.BlogDetails h2{
+
+.BlogDetails h2 {
     margin: 1em;
     margin-left: 1em;
     color: #252b33;
 }
-.BlogDetails h3{
+
+.BlogDetails h3 {
     margin-left: 2em;
     margin-top: 1em;
 }
-.BlogDetails span{
+
+.BlogDetails span {
     color: #20BCD1;
     font-weight: bolder;
 }
-.BlogDetails li{
+
+.BlogDetails li {
     margin-left: 5em;
 }
 
@@ -454,15 +486,16 @@ color: #20BCD1;
 }
 
 #ContactSection input {
-    width: 100%;
+    width: 90%;
     height: 2.5em;
     margin-bottom: 1em;
     border: solid #dae1e3;
     padding-left: 1em;
+    padding-right: 1em;
 }
 
 #ContactSection textarea {
-    width: 100%;
+    width: 90%;
     border: solid #dae1e3;
     padding: 1em;
 }
@@ -479,10 +512,12 @@ color: #20BCD1;
     margin-left: 35%;
     margin-top: 2em;
 }
-.ContactBtn:hover{
+
+.ContactBtn:hover {
     background-color: #D1BC20;
     font-weight: bolder;
 }
+
 .ContactMenu {
     list-style: none;
     padding-top: 8em;
@@ -490,7 +525,8 @@ color: #20BCD1;
     padding-right: 7em;
     color: #252b33;
 }
-.Mail:hover{
+
+.Mail:hover {
     font-weight: bolder;
     font-size: larger;
 }
@@ -499,10 +535,12 @@ color: #20BCD1;
     margin-right: 1em;
     color: black;
 }
-#ContactIcone:hover{
+
+#ContactIcone:hover {
     font-weight: bolder;
     font-size: larger;
 }
+
 footer {
     color: #252b33;
     font-family: "Audiowide", sans-serif;
@@ -511,10 +549,12 @@ footer {
     display: flex;
     justify-content: space-between;
 }
-#DateTime{
+
+#DateTime {
     font-weight: bolder;
     color: #20BCD1;
 }
+
 @media screen and (max-width: 430px) {
     #HomeMenu {
         display: none;
@@ -537,16 +577,21 @@ footer {
         padding-right: 2em;
         cursor: pointer;
     }
+
     .showMenu {
         display: flex;
-    flex-direction: column; /* Stack items vertically */
-    position: absolute; /* Ensure it stays in place */
-    top: 50px; /* Adjust below the burger icon */
-    left: 0;
-    background-color: black;
-    width: 100%; /* Full-width for small screens */
-    padding: 0;
-    z-index: 10; /* Ensure it appears above other elements */
+        flex-direction: column;
+        /* Stack items vertically */
+        position: absolute;
+        /* Ensure it stays in place */
+        top: 50px;
+        /* Adjust below the burger icon */
+        left: 0;
+        background-color: black;
+        width: 100%;
+        padding: 0;
+        z-index: 10;
+        /* Ensure it appears above other elements */
     }
 
     .HomeFlex {
@@ -556,9 +601,11 @@ footer {
         gap: 0em;
         padding-top: 8em;
     }
-#HomePic{
-    margin-bottom: 3em;
-}
+
+    #HomePic {
+        margin-bottom: 3em;
+    }
+
     h2 {
         font-size: 1.5em;
     }
@@ -585,13 +632,16 @@ footer {
     .CvBtn {
         margin-left: 1em;
     }
-    .filterMenu{
+
+    .filterMenu {
         margin-left: 0;
         margin-right: 0;
     }
-    .filterMenu label{
+
+    .filterMenu label {
         margin-left: 6%;
     }
+
     .popup {
         transform: translate(50%, -300%);
     }
@@ -636,19 +686,22 @@ footer {
     .Quote {
         font-size: 0.5em;
     }
-    #BlogFlex{
+
+    #BlogFlex {
         flex-wrap: wrap;
     }
 
-    .BlogDetails{
+    .BlogDetails {
         margin-top: 0;
         margin-left: 1em;
         margin-right: 1em;
         margin-bottom: 3em;
     }
-    .BlogDetails h1{
-padding-top: 3em;
+
+    .BlogDetails h1 {
+        padding-top: 3em;
     }
+
     .ContactFlex {
         flex-direction: column-reverse;
     }
@@ -656,10 +709,12 @@ padding-top: 3em;
     h4 {
         font-size: 1em;
     }
-.ContactForm{
-    display: flex;
-    flex-direction: column;
-}
+
+    .ContactForm {
+        display: flex;
+        flex-direction: column;
+    }
+
     .ContactBtn {
         width: 60%;
         align-items: center;
